@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support · Word Den</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    (function () {
+      var have = ["en", "tr", "de", "fr", "es", "it", "pt", "nl", "da", "pl"];
+      var prefs = navigator.languages || [navigator.language || 'en'];
+      var pick = 'en';
+      for (var i = 0; i < prefs.length; i++) {
+        var c = String(prefs[i]).toLowerCase().split('-')[0];
+        if (c === 'nb' || c === 'no') c = 'da';
+        if (have.indexOf(c) >= 0) { pick = c; break; }
+      }
+      location.replace(pick + '/support.html' + location.hash);
+    })();
+  </script>
+</head>
+<body>
+  <header class="top"><a class="brand" href="en/index.html"><img src="assets/icon.png" alt="" width="36" height="36"><span><b>Word Den</b><small>Daily word games</small></span></a></header>
+  <main class="doc">
+    <h1>Support</h1>
+    <ul class="links"><li><a lang="en" href="en/support.html">English</a></li><li><a lang="tr" href="tr/support.html">Türkçe</a></li><li><a lang="de" href="de/support.html">Deutsch</a></li><li><a lang="fr" href="fr/support.html">Français</a></li><li><a lang="es" href="es/support.html">Español</a></li><li><a lang="it" href="it/support.html">Italiano</a></li><li><a lang="pt" href="pt/support.html">Português</a></li><li><a lang="nl" href="nl/support.html">Nederlands</a></li><li><a lang="da" href="da/support.html">Dansk</a></li><li><a lang="pl" href="pl/support.html">Polski</a></li></ul>
+  </main>
+</body>
+</html>
